@@ -1,0 +1,10 @@
+const TodoLists = [
+    {
+        ListTitle: 'Homework', id: 1, TodoItem: [ { id: 1, itemTitle: "Macroeconomics 101", memo: "due 2/14 @ 11:59pm; Type and submit to canvas"}, { id: 2, itemTitle: "CS315", memo: "Write a recursive function; due 2/19 @11:59pm"}]
+    }, 
+    {
+        ListTitle: 'Chores', id: 2, TodoItem: [ { id: 1, itemTitle: "Home", memo: "Wash laundry"}, { id: 2, itemTitle: "Car", memo: "Pick up car from body shop"}]
+    },  {
+        ListTitle: 'Health', id: 3, TodoItem: [ { id: 1, itemTitle: "Barry's Class", memo: "Castro class w/ Trish @10:40am "}, { id: 2, itemTitle: "Kaiser Appt", memo: "Online call with Primary Care physician"}]
+    }
+]

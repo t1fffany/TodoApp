@@ -1,0 +1,24 @@
+CREATE DATABASE todoapp; 
+
+CREATE TABLE USERS (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE TODO_LISTS (
+    id SERIAL PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES USERS(id) ON DELETE CASCADE
+);
+
+CREATE TABLE TODO_ITEMS (
+    id SERIAL PRIMARY KEY,
+    todo_list_id INT,
+    content VARCHAR(255) NOT NULL,
+    due_date DATE,
+    is_completed BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (todo_list_id) REFERENCES TODO_LISTS(id) ON DELETE CASCADE
+);
